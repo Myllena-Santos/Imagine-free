@@ -1,0 +1,204 @@
+/* Estilos globais */
+body {
+    background-color: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #333;
+    text-align: center; /* Centraliza o texto no body para telas menores */
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 4%;
+}
+
+header h1 {
+    background-color: white;
+    margin: 0 auto 10px;
+    text-align: center;
+    border: 5px solid white;
+    font-size: 2.5em;
+    box-shadow: inset 8px 8px 24px rgba(0, 0, 0, 0.6);
+    width: fit-content;
+    padding: 0.4em 0.8em;
+    color: black;
+    /* Garante que o texto do título seja preto */
+}
+
+header h2 {
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+    border: 5px solid white;
+    font-size: 1.2em;
+    box-shadow: inset 1px 1px 16px rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    padding: 0.2em 0.4em;
+    color: black;
+    /* Garante que o texto do subtítulo seja preto */
+}
+
+/* Conteúdo principal */
+main {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.bem-vindo {
+    color: white;
+    margin-bottom: 20px;
+    /* Adiciona espaço abaixo da mensagem de boas-vindas */
+}
+
+.button-container {
+    display: flex;
+    /* Use flexbox para alinhar os botões */
+    justify-content: center;
+    /* Centraliza os botões horizontalmente */
+    gap: 10px;
+    /* Espaçamento entre os botões */
+    margin-top: 20px;
+    /* Adiciona espaço acima dos botões */
+}
+
+.button-link {
+    text-decoration: none;
+    /* Remove o sublinhado padrão dos links */
+}
+
+.button {
+    background-color: #2c29eb;
+    /* Cor de fundo padrão do botão */
+    color: white;
+    /* Cor do texto padrão do botão */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    /* Tamanho da fonte base para os botões */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.button:hover {
+    background-color: #080741;
+    /* Cor ao passar o mouse (vermelho escuro) */
+    color: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+    background-color: #080741;
+    /* Cor ao clicar (vermelho ainda mais escuro) */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+    font-size: 0.8em;
+    color: #777;
+}
+
+/* Estilos para os links (para remover o sublinhado) */
+main a {
+    text-decoration: none;
+}
+
+/* Estilos para o container dos botões */
+main>a {
+    /* Aplica diretamente aos links dentro do main */
+    display: inline-block;
+    /* Permite margens nas laterais */
+    margin: 10px;
+    /* Adiciona espaçamento entre os botões */
+}
+
+/* Exemplo de Media Query para tablets (largura máxima de 768px) */
+@media (max-width: 768px) {
+    header {
+        font-size: 18px; /* Diminui o tamanho da fonte do cabeçalho */
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    /* Podemos ajustar o layout da lista de histórias para tablets */
+    .historias-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+}
+
+/* Exemplo de Media Query para smartphones (largura máxima de 480px) */
+@media (max-width: 480px) {
+    header {
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 30%; /* Triplicando a margem superior do cabeçalho (era 10%) */
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    /* Layout da lista de histórias para smartphones (uma coluna) */
+    .historias-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .navegacao-historia {
+        flex-direction: column; /* Botões um abaixo do outro em telas pequenas */
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+/* Responsividade para telas menores que 430px de largura e 932px de altura */
+@media (max-width: 430px) and (max-height: 932px) {
+    body {
+        text-align: center; /* Garante que o texto no body seja centralizado */
+    }
+
+    header {
+        text-align: center; /* Garante que o cabeçalho seja centralizado */
+        margin-top: 36%; /* Triplicando a margem superior do cabeçalho (era 12%) */
+    }
+
+    main {
+        text-align: center; /* Garante que o conteúdo principal seja centralizado */
+    }
+
+    .button-container {
+        flex-direction: column; /* Coloca os botões em coluna */
+        align-items: center; /* Centraliza os botões horizontalmente */
+        gap: 15px; /* Aumenta um pouco o espaçamento entre os botões na coluna */
+    }
+
+    main>a {
+        display: block; /* Faz os links ocuparem a largura total */
+        margin: 10px 0; /* Ajusta a margem para cima e para baixo */
+        text-align: center; /* Centraliza o texto dos links */
+    }
+
+    footer {
+        text-align: center; /* Garante que o rodapé seja centralizado */
+    }
+
+    /* Se você tiver outros elementos que precisem ser explicitamente centralizados, adicione-os aqui */
+}

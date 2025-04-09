@@ -1,0 +1,213 @@
+/*
+ * Estilos Gerais
+ * --------------------------------------------------------------------------
+ */
+
+/* Importando a fonte Merriweather do Google Fonts para títulos */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+body {
+    background-color: #ffffff; /* Cor de fundo branca */
+    padding: 0; /* Remove o preenchimento padrão do body */
+    margin: 0; /* Remove a margem padrão do body */
+    border: 0px solid #ccc; /* Remove a borda padrão do body */
+}
+
+main.historia-conteudo {
+    width: 100vw; /* Garante que a largura ocupe toda a viewport */
+    min-height: 100vh; /* Garante que a altura seja pelo menos a da viewport */
+    padding: 20px; /* Adiciona um espaçamento interno ao redor do conteúdo principal */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+}
+
+p {
+    font-family: inherit; /* Herda a fonte definida no body (Arial, sans-serif por padrão do navegador) */
+    color: inherit; /* Herda a cor do texto definida no body (#333 por padrão) */
+    line-height: inherit; /* Herda a altura da linha definida no body (1.6 por padrão) */
+    font-size: 1em; /* Mantém o tamanho da fonte base */
+    margin-bottom: 1em; /* Adiciona um espaço abaixo de cada parágrafo */
+    text-indent: 2em; /* Adiciona um recuo na primeira linha de cada parágrafo */
+}
+
+h4 {
+    font-style: italic; /* Deixa o texto em itálico */
+    color: #000; /* Cor do texto preta */
+    font-size: 18px; /* Tamanho da fonte de 18 pixels */
+    line-height: 1.2; /* Altura da linha de 1.2 vezes o tamanho da fonte */
+}
+
+h5 {
+    color: #000; /* Cor do texto preta */
+    font-size: 18px; /* Tamanho da fonte de 18 pixels */
+    line-height: 1.2; /* Altura da linha de 1.2 vezes o tamanho da fonte */
+}
+
+.indentado {
+    text-indent: 30px; /* Aumenta o recuo do texto */
+}
+
+/*
+ * Container do Parágrafo com Formatação do Título (h2)
+ * --------------------------------------------------------------------------
+ */
+
+.p-container {
+    background-color: white; /* Fundo branco para o container */
+    box-shadow: inset 1px 1px 16px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra interna suave */
+    text-align: left; /* Alinha o texto à esquerda dentro do container */
+    margin: -10px; /* Ajusta a margem para compensar algum espaçamento visual */
+    padding: 1.2em; /* Adiciona espaçamento interno ao container */
+    margin-bottom: 15px; /* Adiciona espaço abaixo do container */
+}
+
+.p-container h2 {
+    font-family: 'Merriweather', serif; /* Usa a fonte Merriweather para o título */
+    text-align: center; /* Centraliza o texto do título */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #000; /* Cor do texto preta */
+    margin-top: 0; /* Remove a margem superior padrão */
+    margin-bottom: 1em; /* Adiciona espaço abaixo do título */
+    font-size: 1.5em; /* Aumenta o tamanho da fonte do título */
+}
+
+.p-container img {
+    display: block; /* Faz a imagem se comportar como um elemento de bloco */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 10px; /* Adiciona espaço abaixo da imagem */
+    border-radius: 5px; /* Adiciona bordas arredondadas à imagem */
+    margin-left: auto; /* Centraliza a imagem horizontalmente */
+    margin-right: auto; /* Centraliza a imagem horizontalmente */
+}
+
+.p-container p {
+    margin: 0; /* Remove a margem padrão do parágrafo dentro do container */
+    color: inherit; /* Herda a cor do texto */
+    font-family: inherit; /* Herda a fonte */
+    font-size: inherit; /* Herda o tamanho da fonte */
+}
+
+/*
+ * Conteúdo da História (Texto Fora do Container)
+ * --------------------------------------------------------------------------
+ */
+
+.historia-conteudo p {
+    color: #000; /* Cor do texto preta */
+    font-family: inherit; /* Herda a fonte */
+    font-size: inherit; /* Herda o tamanho da fonte */
+}
+
+/*
+ * Navegação da História
+ * --------------------------------------------------------------------------
+ */
+
+.navegacao-historia {
+    display: flex; /* Usa flexbox para alinhar os botões */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 15px; /* Adiciona um espaçamento entre os botões */
+    margin-top: 20px; /* Adiciona espaço acima da navegação */
+}
+
+.navegacao-historia a.button {
+    display: inline-block; /* Permite definir largura, altura e margens */
+    background-color: #2c29eb; /* Cor de fundo azul */
+    color: white; /* Cor do texto branca */
+    padding: 10px 15px; /* Adiciona espaçamento interno ao botão */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+.navegacao-historia a.button:hover {
+    background-color: #080741; /* Cor de fundo azul mais escura ao passar o mouse */
+}
+
+.button:active {
+    background-color: #080741; /* Cor de fundo azul mais escura ao clicar */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra interna ao clicar */
+}
+
+/*
+ * Rodapé
+ * --------------------------------------------------------------------------
+ */
+
+footer {
+    text-align: center; /* Centraliza o texto do rodapé */
+    padding: 5px 0; /* Adiciona espaçamento interno superior e inferior */
+    margin-top: 30px; /* Adiciona espaço acima do rodapé */
+    font-size: 0.9em; /* Diminui um pouco o tamanho da fonte */
+    color: #6c757d; /* Cor do texto cinza */
+}
+
+/*
+ * Responsividade
+ * --------------------------------------------------------------------------
+ */
+
+/* Telas menores (máxima largura de 480px) */
+@media (max-width: 480px) {
+    main.historia-conteudo {
+        padding: 10px; /* Diminui o padding em telas menores */
+    }
+
+    p {
+        font-size: 0.9em; /* Diminui o tamanho da fonte do parágrafo */
+        line-height: 1.4; /* Diminui a altura da linha */
+        margin-bottom: 0.8em; /* Diminui a margem inferior */
+    }
+
+    .p-container {
+        font-size: 1em; /* Mantém o tamanho da fonte do container */
+        padding: 1em; /* Diminui o padding do container */
+        margin-bottom: 10px; /* Diminui a margem inferior do container */
+        margin: 0; /* Remove a margem do .p-container em telas pequenas */
+    }
+
+    .p-container h2 {
+        font-size: 1.3em; /* Diminui o tamanho da fonte do título */
+        margin-bottom: 0.6em; /* Diminui a margem inferior do título */
+    }
+
+    .p-container img {
+        margin-bottom: 8px; /* Diminui a margem inferior da imagem */
+    }
+
+    .navegacao-historia {
+        flex-direction: row; /* Mantém os botões em linha */
+        align-items: center; /* Alinha os itens verticalmente ao centro */
+        justify-content: space-around; /* Distribui o espaço entre os botões */
+        gap: 10px; /* Diminui o espaçamento entre os botões */
+        margin-top: 15px; /* Diminui a margem superior */
+    }
+
+    footer {
+        font-size: 0.8em; /* Diminui o tamanho da fonte do rodapé */
+        padding: 8px 0; /* Aumenta um pouco o padding vertical */
+        margin-top: 20px; /* Diminui a margem superior */
+    }
+}
+
+/* Dispositivos com telas 480x1040 */
+@media (width: 480px) and (height: 1040px) {
+    p {
+        font-size: 0.95em; /* Ajusta o tamanho da fonte do parágrafo */
+        line-height: 1.5; /* Ajusta a altura da linha */
+        margin-bottom: 1em; /* Mantém a margem inferior */
+    }
+
+    .p-container {
+        font-size: 1.1em; /* Aumenta um pouco o tamanho da fonte do container */
+        margin: 0; /* Remove a margem do .p-container para esta resolução também */
+    }
+
+    .p-container h2 {
+        font-size: 1.4em; /* Ajusta o tamanho da fonte do título */
+    }
+
+    .navegacao-historia {
+        margin-top: 25px; /* Aumenta a margem superior */
+    }
+}

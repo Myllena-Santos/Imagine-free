@@ -1,0 +1,323 @@
+/* Estilos globais */
+body {
+    background-color: #ffffff;
+    border: 10px solid#ffffff;
+    box-shadow: inset 1px 1px 16px rgba(0, 0, 0, 0.2);
+    min-height: 100vh;
+    width: 100%;
+    margin: 0px; /* Mantendo a margem padrão como 0px */
+    padding: 0;
+    font-family: sans-serif;
+    /* Fonte padrão para o corpo do texto */
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 0%;
+}
+
+header h2 {
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+    border: 5px solid white;
+    font-size: 1.8em;
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.3);
+    width: fit-content;
+    padding: 0.3em 0.9em;
+    color: black;
+    font-family: serif;
+    /* Fonte serifada para o subtítulo do cabeçalho */
+}
+
+/* Conteúdo principal */
+main {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+main p {
+    font-family: sans-serif;
+    /* Garante que parágrafos no main usem a fonte padrão do body */
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+main a {
+    text-decoration: none;
+    font-family: sans-serif;
+    /* Estilo da fonte para links no main */
+    color: #007bff;
+    /* Cor padrão para links */
+}
+
+.historia-card img {
+    max-width: 100%;
+    /* Garante que a imagem não ultrapasse a largura do card */
+    height: auto;
+    margin-bottom: 10px;
+    /* Adiciona um espaço abaixo da imagem */
+    border-radius: 5px;
+    /* Opcional: adiciona bordas arredondadas à imagem */
+}
+
+.bem-vindo {
+    color: white;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    /* Fonte para a mensagem de boas-vindas */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-link {
+    text-decoration: none;
+}
+
+.button {
+    background-color: #2c29eb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: sans-serif;
+    /* Fonte para os botões */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    background-color: #080741;
+    color: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+    background-color: #080741;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+    font-size: 0.8em;
+    color: #777;
+    font-family: sans-serif;
+    /* Fonte para o texto do rodapé */
+}
+
+/* Estilos para os links (para remover o sublinhado) */
+/* main a já estilizado acima */
+
+/* Estilos para o container dos botões */
+main>a {
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Exemplo de Media Query para tablets (largura máxima de 768px) */
+@media (max-width: 768px) {
+    header {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+        font-family: serif;
+        /* Exemplo de fonte serifada para h1 em tablets */
+    }
+
+    .historias-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+}
+
+/* Exemplo de Media Query para smartphones (largura máxima de 480px) */
+@media (max-width: 480px) {
+    body {
+        margin: 0px; /* Garante que a margem seja 0 em dispositivos pequenos */
+    }
+
+    header {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        font-family: serif;
+        /* Exemplo de fonte serifada para h1 em smartphones */
+    }
+
+    .historias-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .navegacao-historia {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Diminuindo o tamanho da imagem pela metade em dispositivos pequenos */
+    .historia-card img {
+        max-width: 50%; /* Reduz a largura máxima da imagem para 50% */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
+
+/* Responsividade para telas menores que 430px de largura e 932px de altura */
+@media (max-width: 430px) and (max-height: 932px) {
+    body {
+        width: auto;
+        margin: 0px; /* Garante que a margem seja 0 nesta faixa também */
+        /* A largura se ajustará ao conteúdo */
+    }
+
+    header {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    header h2 {
+        font-size: 1.5em;
+    }
+
+    main {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    main>a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    footer {
+        font-size: 0.7em;
+        padding: 8px 0;
+    }
+
+    /* Diminuindo o tamanho da imagem pela metade em telas muito pequenas */
+    .historia-card img {
+        max-width: 50%; /* Reduz a largura máxima da imagem para 50% */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
+
+/* Responsividade para proporções de 430x936 */
+@media (width: 430px) and (height: 936px) {
+    body {
+        width: auto;
+        margin: 0px; /* Garante que a margem seja 0 nesta faixa também */
+        /* Ajusta a largura ao conteúdo */
+    }
+
+    header {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    header h2 {
+        font-size: 1.5em;
+    }
+
+    main {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    main>a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    footer {
+        font-size: 0.7em;
+        padding: 8px 0;
+    }
+
+    /* Diminuindo o tamanho da imagem pela metade nesta proporção */
+    .historia-card img {
+        max-width: 50%; /* Reduz a largura máxima da imagem para 50% */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
+
+/* Responsividade para proporções de 480x1040 */
+@media (width: 480px) and (height: 1040px) {
+    body {
+        width: auto;
+        margin: 0px; /* Garante que a margem seja 0 nesta faixa também */
+        /* Ajusta a largura ao conteúdo */
+    }
+
+    header {
+        font-size: 17px;
+        padding: 18px;
+    }
+
+    header h2 {
+        font-size: 1.6em;
+    }
+
+    main {
+        padding: 18px;
+        font-size: 19px;
+    }
+
+    .button-container {
+        flex-direction: row;
+        /* Volta a exibir os botões em linha */
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    main>a {
+        display: inline-block;
+        /* Volta a exibir os links em linha */
+        margin: 10px;
+    }
+
+    footer {
+        font-size: 0.75em;
+        padding: 9px 0;
+    }
+
+    /* Diminuindo o tamanho da imagem pela metade nesta proporção */
+    .historia-card img {
+        max-width: 50%; /* Reduz a largura máxima da imagem para 50% */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}

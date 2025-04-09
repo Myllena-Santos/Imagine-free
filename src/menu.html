@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórias - IMAGINE</title>
+    <link rel="stylesheet" href="/src/menu.css">
+    <style>
+        .sinopse-completa {
+            height: 0;
+            overflow: hidden;
+            transition: height 0.3s ease-out;
+            margin-top: 10px;
+        }
+
+        .historia-card.expandido .sinopse-completa {
+            height: auto; /* A altura será definida pelo conteúdo */
+        }
+
+        .ver-mais-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .ver-mais-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .historia-card img {
+            max-width: 100%; /* Garante que a imagem não ultrapasse a largura do card */
+            height: auto;
+            margin-bottom: 10px; /* Adiciona um espaço abaixo da imagem */
+            border-radius: 5px; /* Opcional: adiciona bordas arredondadas à imagem */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>HISTÓRIAS</h2>
+    </header>
+
+    <main class="historias-container">
+        <section class="historia-card">
+            <img src="/src/historias/img/cairo-capa.jpeg" alt="Capa da história A Doçura Sombria de Cairo">
+            <h3>A DOÇURA SOMBRIA DE CAIRO SWEET</h3>
+            <p class="autor">Por: Salvore</p>
+            <p class="sinopse">A detetive S/N se vê envolvida em um caso intrigante: assassinatos que estranhamente
+                ecoam os best-sellers de Cairo, uma escritora de mistério com um passado nebuloso. Um informante anônimo
+                a alerta: os múltiplos livros de Cairo não são ficção, mas um mapa de seus crimes.</p>
+            <div class="sinopse-completa">
+                <p>Enquanto S/N investiga, a fronteira entre a realidade e a perturbadora obra de Cairo se esvai. Cada
+                    pista a aproxima da escritora, uma mulher magnética cuja inteligência e beleza despertam uma atração
+                    inegável na detetive. Essa paixão proibida se torna um jogo perigoso, ameaçando sua carreira e seu coração,
+                    enquanto S/N luta para desvendar a verdade nos livros de Cairo antes que sua crescente obsessão a consuma.
+                    A linha entre a investigadora e a suspeita se torna tênue, forçando S/N a confrontar a possibilidade de que a
+                    mulher que a cativa seja a mente por trás de um suspense mortal.</p>
+            </div>
+            <button class="ver-mais-btn" data-target=".historia-card:first-child">Ver Mais</button>
+            <a href="/src/historias/cairo1.html" class="button">Ler Capítulo 1</a>
+        </section>
+
+        <section class="historia-card">
+            <img src="/imagens/titulo2-capa.jpg" alt="Capa da história Título da História 2">
+            <h3>Título da História 2</h3>
+            <p class="autor">Por: Autor 2</p>
+            <p class="sinopse">Sinopse da história 2. Mais detalhes sobre o enredo e os personagens principais podem ser
+                encontrados aqui.</p>
+            <div class="sinopse-completa">
+                <p>Este é o texto completo da sinopse da história 2. Ele contém informações adicionais que são
+                    inicialmente ocultas e reveladas ao clicar no botão "Ver Mais".</p>
+                <p>Mais um parágrafo para demonstrar o conteúdo completo.</p>
+            </div>
+            <button class="ver-mais-btn" data-target=".historia-card:nth-child(2)">Ver Mais</button>
+            <a href="/historias/historia2.html" class="button">Ler Mais</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 IMAGINE - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const verMaisBotoes = document.querySelectorAll('.ver-mais-btn');
+
+            verMaisBotoes.forEach(function(botao) {
+                botao.addEventListener('click', function() {
+                    const historiaCard = this.closest('.historia-card');
+                    const sinopseCompleta = historiaCard.querySelector('.sinopse-completa');
+
+                    historiaCard.classList.toggle('expandido');
+
+                    if (historiaCard.classList.contains('expandido')) {
+                        botao.textContent = 'Ver Menos';
+                    } else {
+                        botao.textContent = 'Ver Mais';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
